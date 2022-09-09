@@ -1,133 +1,97 @@
-INSERT INTO genres VALUES (1, 'русская поп-музыка');
-INSERT INTO genres VALUES (2, 'танцевальная музыка');
-INSERT INTO genres VALUES (3, 'поп');
-INSERT INTO genres VALUES (4, 'хип-хоп');
-INSERT INTO genres VALUES (5, 'инди');
-INSERT INTO genres VALUES (6, 'рок');
+INSERT INTO genres VALUES 
+	(1, 'русская поп-музыка'),
+	(2, 'танцевальная музыка'),
+	(3, 'поп'),
+	(4, 'хип-хоп'),
+	(5, 'инди'),
+	(6, 'рок');
 
-INSERT INTO collections VALUES (1, 'Песни 2022 года', 2022);
-INSERT INTO collections VALUES (2, 'Песни из Tik-Tok', 2022);
-INSERT INTO collections VALUES (3, 'Музыка 2020-х', 2020);
-INSERT INTO collections VALUES (4, 'Хиты 2019', 2019);
-INSERT INTO collections VALUES (5, 'Хиты FM 2018', 2018);
-INSERT INTO collections VALUES (6, 'Верните мой 2018', 2018);
-INSERT INTO collections VALUES (7, 'Лучшие песни 2017 года', 2017);
-INSERT INTO collections VALUES (8, 'Саундтреки лета 2016 года', 2016);
+INSERT INTO collections VALUES 
+	(1, 'Песни 2022 года', 2022),
+	(2, 'Песни из Tik-Tok', 2022),
+	(3, 'Музыка 2020-х', 2020),
+	(4, 'Хиты 2019', 2019),
+	(5, 'Хиты FM 2018', 2018),
+	(6, 'Верните мой 2018', 2018),
+	(7, 'Лучшие песни 2017 года', 2017),
+	(8, 'Саундтреки лета 2016 года', 2016);
 
-INSERT INTO albums VALUES (1, 'Fenix deluxe', 2022);
-INSERT INTO albums VALUES (2, 'Моё море', 2021);
-INSERT INTO albums VALUES (3, 'Палец пистолет', 2018);
-INSERT INTO albums VALUES (4, 'Кредо', 2019);
-INSERT INTO albums VALUES (5, 'Девочка, не плачь', 2022);
-INSERT INTO albums VALUES (6, 'Single Lady', 2010);
-INSERT INTO albums VALUES (7, 'Best Of - The Hit Collection 2001-2007', 2007);
-INSERT INTO albums VALUES (8, 'Before The Dinosaurs', 2011);
-INSERT INTO albums VALUES (9, 'Music To Be Murdered By', 2020);
-INSERT INTO albums VALUES (10, 'Pride', 2019);
-INSERT INTO albums VALUES (11, 'Woodstock', 2017);
-INSERT INTO albums VALUES (12, 'Black Water', 2018);
-INSERT INTO albums VALUES (13, 'Melodrama', 2017);
-INSERT INTO albums VALUES (14, 'Malibu', 2016);
-INSERT INTO albums VALUES (15, 'Summer Songs 2', 2016);
-INSERT INTO albums VALUES (16, 'Мой рай', 2007);
-INSERT INTO albums VALUES (17, 'Transmissions', 2014);
+INSERT INTO albums VALUES 
+	(1, 'Fenix deluxe', 2022),
+	(2, 'Моё море', 2021),
+	(3, 'Палец пистолет', 2018),
+	(4, 'Кредо', 2019),
+	(5, 'Девочка, не плачь', 2022),
+	(6, 'Single Lady', 2010),
+	(7, 'Best Of - The Hit Collection 2001-2007', 2007),
+	(8, 'Before The Dinosaurs', 2011),
+	(9, 'Music To Be Murdered By', 2020),
+	(10, 'Pride', 2019),
+	(11, 'Woodstock', 2017),
+	(12, 'Black Water', 2018),
+	(13, 'Melodrama', 2017),
+	(14, 'Malibu', 2016),
+	(15, 'Summer Songs 2', 2016),
+	(16, 'Мой рай', 2007),
+	(17, 'Transmissions', 2014),
+	(18, 'Stories', 2017);
 
-INSERT INTO tracks VALUES (1, 'по барам',  237, 1); /*ANNA ASTI русская поп-музыка*/
-INSERT INTO tracks VALUES (2, 'мне страшно любить тебя', 138, 2); /*Nicebeatzprod русская поп-музыка*/
-INSERT INTO tracks VALUES (3, 'Забыла, не помню', 241, 3); /*планка русская поп-музыка*/
-INSERT INTO tracks VALUES (4, 'Кредо', 202, 4); /*GAYAZOV$ BROTHER$*/
-INSERT INTO tracks VALUES (5, 'Материк', 155, 5); /* Артём Качер, Ани Лорак русская поп-музыка */
-INSERT INTO tracks VALUES (6, 'Single Lady', 197, 6);
-INSERT INTO tracks VALUES (7, 'Forgiven', 206, 7);
-INSERT INTO tracks VALUES (8, 'Friends', 221, 8);
-INSERT INTO tracks VALUES (9, 'Godzilla', 210, 9);
-INSERT INTO tracks VALUES (10, 'Алые-алые', 191, 10);
-INSERT INTO tracks VALUES (11, 'Feel It Still', 162, 11);
-INSERT INTO tracks VALUES (12, 'Drunk Groove', 226, 12);
-INSERT INTO tracks VALUES (13, 'Green Light', 234, 13);
-INSERT INTO tracks VALUES (14, 'Come down', 176, 14);
-INSERT INTO tracks VALUES (15, 'King of teens', 135, 15);
-INSERT INTO tracks VALUES (16, 'Мой рай', 215, 16);
-INSERT INTO tracks VALUES (17, 'My demons', 288, 17);
+INSERT INTO tracks VALUES 
+	(1, 'по барам',  237, 1),
+	(2, 'мне страшно любить тебя', 138, 2),
+	(3, 'Забыла, не помню', 241, 3),
+	(4, 'Кредо', 202, 4),
+	(5, 'Материк', 155, 5),
+	(6, 'Single Lady', 197, 6),
+	(7, 'Forgiven', 206, 7),
+	(8, 'Friends', 221, 8),
+	(9, 'Godzilla', 210, 9),
+	(10, 'Алые-алые', 191, 10),
+	(11, 'Feel It Still', 162, 11),
+	(12, 'Drunk Groove', 226, 12),
+	(13, 'Green Light', 234, 13),
+	(14, 'Come down', 176, 14),
+	(15, 'King of teens', 135, 15),
+	(16, 'Мой рай', 215, 16),
+	(17, 'My demons', 288, 17),
+	(18, 'Важные фразы', 221, 18);
 
-INSERT INTO artists VALUES(1, 'ANNA ASTI');
-INSERT INTO artists VALUES(2, 'Nicebeatzprod');
-INSERT INTO artists VALUES(3, 'Планка');
-INSERT INTO artists VALUES(4, 'GAYAZOV$ BROTHER$');
-INSERT INTO artists VALUES(5, 'Артём Качер');
-INSERT INTO artists VALUES(6, 'Ани Лорак');
-INSERT INTO artists VALUES(7, 'Dj Layla');
-INSERT INTO artists VALUES(8, 'Dee-Dee');
-INSERT INTO artists VALUES(9, 'Sylver');
-INSERT INTO artists VALUES(10, 'Aura Dione');
-INSERT INTO artists VALUES(11, 'Eminem');
-INSERT INTO artists VALUES(12, 'Juice WRLD');
-INSERT INTO artists VALUES(13, 'RASA');
-INSERT INTO artists VALUES(14, 'Portugal. The Man');
-INSERT INTO artists VALUES(15, 'MARUV');
-INSERT INTO artists VALUES(16, 'BOOSIN');
-INSERT INTO artists VALUES(17, 'Lorde');
-INSERT INTO artists VALUES(18, 'Anderson .Paak');
-INSERT INTO artists VALUES(19, 'Lil Yachty');
-INSERT INTO artists VALUES(20, 'МакSим');
-INSERT INTO artists VALUES(21, 'Starset');
+INSERT INTO artists VALUES
+	(1, 'ANNA ASTI'),
+	(2, 'Nicebeatzprod'),
+	(3, 'Планка'),
+	(4, 'GAYAZOV$ BROTHER$'),
+	(5, 'Артём Качер'),
+	(6, 'Ани Лорак'),
+	(7, 'Dj Layla'),
+	(8, 'Dee-Dee'),
+	(9, 'Sylver'),
+	(10, 'Aura Dione'),
+	(11, 'Eminem'),
+	(12, 'Juice WRLD'),
+	(13, 'RASA'),
+	(14, 'Portugal. The Man'),
+	(15, 'MARUV'),
+	(16, 'BOOSIN'),
+	(17, 'Lorde'),
+	(18, 'Anderson .Paak'),
+	(19, 'Lil Yachty'),
+	(20, 'МакSим'),
+	(21, 'Starset');
 
-INSERT INTO artist_genres VALUES (1, 1);
-INSERT INTO artist_genres VALUES (2, 1);
-INSERT INTO artist_genres VALUES (3, 1);
-INSERT INTO artist_genres VALUES (4, 1);
-INSERT INTO artist_genres VALUES (5, 1);
-INSERT INTO artist_genres VALUES (6, 1);
-INSERT INTO artist_genres VALUES (7, 2);
-INSERT INTO artist_genres VALUES (8, 2);
-INSERT INTO artist_genres VALUES (9, 2);
-INSERT INTO artist_genres VALUES (10, 3);
-INSERT INTO artist_genres VALUES (11, 4);
-INSERT INTO artist_genres VALUES (12, 4);
-INSERT INTO artist_genres VALUES (13, 1);
-INSERT INTO artist_genres VALUES (14, 5);
-INSERT INTO artist_genres VALUES (15, 2);
-INSERT INTO artist_genres VALUES (16, 2);
-INSERT INTO artist_genres VALUES (17, 3);
-INSERT INTO artist_genres VALUES (18, 4);
-INSERT INTO artist_genres VALUES (19, 4);
-INSERT INTO artist_genres VALUES (20, 1);
-INSERT INTO artist_genres VALUES (21, 6);
+INSERT INTO artist_genres VALUES 
+	(1, 1), (2, 1), (3, 1), (4, 1), (5, 1),
+	(6, 1), (7, 2), (8, 2), (9, 2), (10, 3),
+	(11, 4), (12, 4), (13, 1), (14, 5), (15, 1), (15, 2),
+	(16, 2), (17, 3), (18, 4), (19, 4), (20, 1), (21, 6);
 
-INSERT INTO album_artists VALUES (1, 1);
-INSERT INTO album_artists VALUES (2, 2);
-INSERT INTO album_artists VALUES (3, 3);
-INSERT INTO album_artists VALUES (4, 4);
-INSERT INTO album_artists VALUES (5, 5);
-INSERT INTO album_artists VALUES (5, 6);
-INSERT INTO album_artists VALUES (6, 7);
-INSERT INTO album_artists VALUES (6, 8);
-INSERT INTO album_artists VALUES (7, 9);
-INSERT INTO album_artists VALUES (8, 10);
-INSERT INTO album_artists VALUES (9, 11);
-INSERT INTO album_artists VALUES (9, 12);
-INSERT INTO album_artists VALUES (10, 13);
-INSERT INTO album_artists VALUES (11, 14);
-INSERT INTO album_artists VALUES (12, 15);
-INSERT INTO album_artists VALUES (12, 16);
-INSERT INTO album_artists VALUES (13, 17);
-INSERT INTO album_artists VALUES (14, 18);
-INSERT INTO album_artists VALUES (15, 19);
-INSERT INTO album_artists VALUES (16, 20);
-INSERT INTO album_artists VALUES (17, 21);
+INSERT INTO album_artists VALUES 
+	(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (5, 6),
+	(6, 7), (6, 8), (7, 9), (8, 10), (9, 11), (9, 12),
+	(10, 13), (11, 14), (12, 15), (12, 16), (13, 17), 
+	(14, 18), (15, 19), (16, 20), (17, 21), (18, 15);
 
-INSERT INTO collection_tracks VALUES (1, 1);
-INSERT INTO collection_tracks VALUES (1, 2);
-INSERT INTO collection_tracks VALUES (1, 3);
-INSERT INTO collection_tracks VALUES (1, 4);
-INSERT INTO collection_tracks VALUES (1, 5);
-INSERT INTO collection_tracks VALUES (2, 6);
-INSERT INTO collection_tracks VALUES (2, 7);
-INSERT INTO collection_tracks VALUES (2, 8);
-INSERT INTO collection_tracks VALUES (3, 9);
-INSERT INTO collection_tracks VALUES (4, 10);
-INSERT INTO collection_tracks VALUES (5, 11);
-INSERT INTO collection_tracks VALUES (6, 12);
-INSERT INTO collection_tracks VALUES (7, 13);
-INSERT INTO collection_tracks VALUES (8, 14);
-INSERT INTO collection_tracks VALUES (8, 15);
+INSERT INTO collection_tracks VALUES 
+	(1, 1), (1, 2), (1, 3), (1, 4), (1, 5),
+	(2, 6), (2, 7), (2, 8), (3, 9), (4, 10),
+	(5, 11), (6, 12), (7, 13), (8, 14), (8, 15);
