@@ -214,12 +214,12 @@ class Clients:
                 filter_by_phone = True
                 filter_parts += [('client_phone.phone', Phone.parse(value),)]
             elif key in ['first_name', 'last_name', 'email']:
-                filter_parts += [(f'client.{key}', value,)]
+                filter_parts += [(f'client.{key}', f'%{value.lower()}%',)]
         with self.connection.cursor() as cur:
             query = 'SELECT client.* FROM client'
             if filter_by_phone:
                 query += ' JOIN client_phone ON client_phone.client_id = client.id'
-            query += f' WHERE {" AND ".join([v[0] + " LIKE %s" for v in filter_parts])};'
+            query += f' WHERE {" AND ".join(["LOWER(" + v[0] + ") LIKE %s" for v in filter_parts])};'
             cur.execute(query, tuple([v[1] for v in filter_parts]))
             return [Client(self, *client) for client in cur.fetchall()]
 
