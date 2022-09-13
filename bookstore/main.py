@@ -5,7 +5,7 @@ from model import Publisher
 import json
 import os
 
-DB_TYPE = os.getenv('DB_TYPE').lower() or 'postgresql'
+DB_TYPE = os.getenv('DB_TYPE') or 'postgresql'
 DB_NAME = os.getenv('DB_NAME') or 'postgres'
 DB_USER = os.getenv('DB_USER') or 'postgres'
 DB_PASSWORD = os.getenv('DB_PASSWORD') or 'postgres'
@@ -26,7 +26,7 @@ def fill_in_tables(session: sqlalchemy.orm.session.Session):
 
 
 if __name__ == '__main__':
-    DSN = f'{DB_TYPE}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
+    DSN = f'{DB_TYPE.lower()}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
     engine = sqlalchemy.create_engine(DSN)
     model.create_tables(engine)
 
