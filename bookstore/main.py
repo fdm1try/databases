@@ -34,9 +34,9 @@ if __name__ == '__main__':
     session = Session()
     fill_in_tables(session)
     user_input = input('Введите ID или наименование издателя: ')
-    try:
+    if user_input.isdigit():
         print(session.query(Publisher).filter(Publisher.id == int(user_input)).one())
-    except Exception as e:
+    else:
         print(session.query(Publisher).filter(Publisher.name == user_input).one())
 
     session.close()
