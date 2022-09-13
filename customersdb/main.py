@@ -2,9 +2,9 @@ import psycopg2
 import sys
 import re
 
-DB_NAME = 'client1'
-DB_USER = 'admin'
-DB_PASSWORD = 'admin'
+DB_NAME = 'postgres'
+DB_USER = 'postgres'
+DB_PASSWORD = ''
 DB_HOST = '127.0.0.1'
 DB_PORT = None
 PAGE_SIZE = 5
