@@ -9,9 +9,10 @@ class Publisher(Base):
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     name = sqlalchemy.Column(sqlalchemy.Text, unique=True)
+    books = relationship("Book", backref='publisher')
 
     def __str__(self):
-        return f'{self.id}: {self.name}'
+        return self.name
 
 
 class Shop(Base):
@@ -19,6 +20,11 @@ class Shop(Base):
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     name = sqlalchemy.Column(sqlalchemy.Text, unique=True)
+
+    stock = relationship('Stock', back_populates='shop')
+
+    def __str__(self):
+        return f'{self.name}'
 
 
 class Book(Base):
@@ -28,7 +34,10 @@ class Book(Base):
     title = sqlalchemy.Column(sqlalchemy.Text, nullable=False)
     id_publisher = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("publisher.id"), nullable=False)
 
-    publisher = relationship(Publisher, backref='publisher')
+    stock = relationship('Stock', back_populates='book')
+
+    def __str__(self):
+        return f'{self.title} ({self.publisher})'
 
 
 class Stock(Base):
@@ -39,8 +48,12 @@ class Stock(Base):
     id_shop = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("shop.id"), nullable=False)
     count = sqlalchemy.Column(sqlalchemy.Integer, nullable=False)
 
-    book = relationship(Book, backref='book')
-    shop = relationship(Shop, backref='shop')
+    sales = relationship('Sale', backref='stock')
+    book = relationship('Book', back_populates='stock')
+    shop = relationship('Shop', back_populates='stock')
+
+    def __str__(self):
+        return f'{self.shop.name} ({self.count} pcs.)'
 
 
 class Sale(Base):
@@ -48,15 +61,14 @@ class Sale(Base):
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     price = sqlalchemy.Column(sqlalchemy.Float, nullable=False)
-    date_sale = sqlalchemy.Column(sqlalchemy.Date)
+    date_sale = sqlalchemy.Column(sqlalchemy.DateTime)
     id_stock = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey("stock.id"), nullable=False)
     count = sqlalchemy.Column(sqlalchemy.Integer, nullable=False)
 
-    stock = relationship(Stock, backref='stock')
+    def __str__(self):
+        return f'${self.price} ({self.count} pcs.) till {self.date_sale}'
 
 
 def create_tables(engine):
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
-
-
