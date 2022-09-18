@@ -6,5 +6,5 @@
 https://github.com/fdm1try/databases/blob/ad162b494cffaa580542635382f8b83810e1b89f/bookstore/main.py#L8-L13
 ### Обновления согласно замечаниям:
 - [x] добавлена выборка магазинов, в которых продаются книги указанного пользователем издателя;
-- [x] исправлена модель, приведена в соответствие шаблонам SQLAlchemy;
-- [x] добавлен файл requirements.txt;
+- [x] [исправлена модель](https://github.com/fdm1try/databases/commit/5d9e979950a967f7e592fabb10df5f37414ad797), приведена в соответствие шаблонам SQLAlchemy;
+- [x] добавлен файл [requirements.txt](requirements.txt);
