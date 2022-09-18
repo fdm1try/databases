@@ -1,7 +1,7 @@
 import sqlalchemy
 from sqlalchemy.orm import sessionmaker
 import model
-from model import Publisher
+from model import Publisher, Book, Stock, Shop
 import json
 import os
 
@@ -34,9 +34,19 @@ if __name__ == '__main__':
     session = Session()
     fill_in_tables(session)
     user_input = input('Введите ID или наименование издателя: ')
-    if user_input.isdigit():
-        print(session.query(Publisher).filter(Publisher.id == int(user_input)).one())
+    publisher_shops = (
+        session.query(Publisher.name, Shop.name)
+        .join(Stock, Stock.id_shop == Shop.id)
+        .join(Book, Book.id == Stock.id_book)
+        .join(Publisher, Book.id_publisher == Publisher.id)
+        .filter(Publisher.id == int(user_input) if user_input.isdigit() else Publisher.name == user_input)
+        .distinct(Shop.name)
+        .group_by(Publisher.name, Shop.name)
+    ).all()
+    if not len(publisher_shops):
+        print('Издатель не найден')
     else:
-        print(session.query(Publisher).filter(Publisher.name == user_input).one())
-
-    session.close()
+        publisher = publisher_shops[0][0]
+        shops = [item[1] for item in publisher_shops]
+        print(f'Издатель: {publisher}')
+        print(f'Его книги продаются в магазинах: {", ".join(shops)}')
